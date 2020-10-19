@@ -26,11 +26,11 @@ pacote `{pdftools}`:
     edital <- pdftools::pdf_text(exemplo_pdf)
 
 Depois de importada sua lista você poderá utilizar a função
-`somaEditais` para encontrar o total dos créditos
+`soma_edital` para encontrar o total dos créditos
 
 ## Exemplo
 
-    listaAJ <- somaEdital(edital)
+    listaAJ <- soma_edital(edital)
 
     listaAJ
 
