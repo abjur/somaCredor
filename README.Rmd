@@ -1,0 +1,33 @@
+---
+output: github_document
+---
+
+# Somar Editais de lista de credores
+
+O objetivo desse pacote `{somarLista}` é disponibilizar o script que ajuda a somar todos os créditos 
+da lista de credores que não apresentar um total oficial. 
+
+Para seu funcionamento necessariamente a lista precisa originar nos padrões de edital do Tribunal de Justiça de São Paulo. 
+
+# Instalação
+
+```{r eval=FALSE}
+ remotes::install_github("abjur/somaLista")
+```
+
+ O primeiro passo é importar a lista em arquivo `.pdf` utilizando o pacote `{pdftools}`:
+ 
+``` {r message=FALSE, warning=FALSE, results='hide'}
+# importando arquivo em pdf
+ edital <- pdftools::pdf_text("~/Downloads/lista_aj.pdf")
+```
+
+Depois de importada sua lista você poderá utilizar a função `somaEditais` para encontrar o total dos créditos 
+
+# Por exemplo:
+
+```{r message=FALSE, warning=FALSE, results='hide'}
+listaAJ <- somaEditais(edital)
+``` 
+
+
