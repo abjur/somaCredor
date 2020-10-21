@@ -35,9 +35,9 @@ Depois de importada sua lista você poderá utilizar a função `soma_edital` pa
 ## Exemplo
 
 ```{r message=FALSE, warning=FALSE}
-listaAJ <- soma_edital(edital)
+resultado <- soma_edital(edital)
 
-listaAJ
+resultado
 ``` 
 
 
