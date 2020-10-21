@@ -10,28 +10,34 @@ padrões de edital do Tribunal de Justiça de São Paulo.
 
 # Instalação
 
-    remotes::install_github("abjur/somaRelacaoCredores")
+``` r
+remotes::install_github("abjur/somaRelacaoCredores")
+```
 
 O primeiro passo é importar a lista em arquivo `.pdf` utilizando o
 pacote `{pdftools}`:
 
-    library(somaRelacaoCredores)
+``` r
+library(somaRelacaoCredores)
 
-    # importando arquivo em pdf
+# importando arquivo em pdf
 
-    exemplo_pdf <- system.file(
-      "lista_aj.pdf", 
-      package = "somaRelacaoCredores"
-    )
-    edital <- pdftools::pdf_text(exemplo_pdf)
+exemplo_pdf <- system.file(
+  "lista_aj.pdf", 
+  package = "somaRelacaoCredores"
+)
+edital <- pdftools::pdf_text(exemplo_pdf)
+```
 
 Depois de importada sua lista você poderá utilizar a função
 `soma_edital` para encontrar o total dos créditos
 
 ## Exemplo
 
-    listaAJ <- soma_edital(edital)
+``` r
+resultado <- soma_edital(edital)
 
-    listaAJ
+resultado
+```
 
-    ## [1] 4809999
+    ## [1] 5190181
