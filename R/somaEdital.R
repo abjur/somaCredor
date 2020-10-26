@@ -78,9 +78,6 @@ soma_edital <- function(edital) {
   return(sum(valores))
 }
 
-library(magrittr)
-edital <- pdftools::pdf_text("~/Downloads/lista_aj.pdf")
-soma_edital(edital)
 
 
 
