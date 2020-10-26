@@ -30,7 +30,7 @@ edital <- pdftools::pdf_text(exemplo_pdf)
 ```
 
 Depois de importada sua lista você poderá utilizar a função
-`soma_edital` para encontrar o total dos créditos
+`soma_edital` para encontrar o total dos créditos.
 
 ## Exemplo
 
@@ -41,3 +41,17 @@ resultado
 ```
 
     ## [1] 5190181
+
+## Observações
+
+Observamos que o padrão do documento oficial pode-se alterar dependendo
+da organização dos responsáveis pela Lista de Credor.
+
+A função prevê o funcionamento ideal para os seguintes problemas:
+
+  - Valores entre a quebra da Página do TJSP.
+
+  - Valores com erros de typo seguindo de (,): 100,000,00.
+
+Caso existir algum desses padrões, verifique o resultado de forma
+manual.
