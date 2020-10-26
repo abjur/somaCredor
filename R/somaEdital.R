@@ -38,6 +38,7 @@ soma_edital <- function(edital) {
     unlist() %>%
     # marca de agrupamento pela localidade e ignorada
     readr::parse_number(locale = readr::locale(grouping_mark = ".", decimal_mark = ","))
+
   # Garantir que não tivemos problemas com o parse
   if (length(valores) != sum(stringr::str_count(texto, "\\$"))) {
     warn_parse()
@@ -62,14 +63,15 @@ soma_edital <- function(edital) {
       # extrair pedacos identificados pelo padrão, reconhece somente numeros
       stringr::str_extract_all("R\\$ ?[0-9,.]+") %>%
       # converter lista em vetor
-      unlist()
-    final <- stringr::str_extract(entrada, ",[0-9]{2}$") %>%
-      stringr::str_remove_all("[.,]+$")
+      unlist() %>%
+      # Remover finalzinho extra dos números
+    stringr::str_remove_all("[.,]+$")
+    final <- stringr::str_extract(entrada, ",[0-9]{2}$")
     inicio_arrumado <-
       stringr::str_extract(entrada, ".+(?=,[0-9]{2}$)") %>%
-      stringr::str_remove_all("[^0-9]") %>%
-    # Agrupando as variaveis
-    valores <- stringr::str_c(inicio_arrumado, final) %>%
+      stringr::str_remove_all("[^0-9]")
+      # Agrupando as variaveis
+      valores <- stringr::str_c(inicio_arrumado, final) %>%
       # Marca de agrupamento pela localidade e ignorada
       readr::parse_number(locale = readr::locale(decimal_mark = ","))
   }
@@ -79,3 +81,8 @@ soma_edital <- function(edital) {
 library(magrittr)
 edital <- pdftools::pdf_text("~/Downloads/lista_aj.pdf")
 soma_edital(edital)
+
+
+
+
+
