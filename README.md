@@ -11,22 +11,20 @@ oficiais de edital do Tribunal de Justiça de São Paulo.
 # Instalação
 
 ``` r
-#remotes::install_github("abjur/somaCredor")
+remotes::install_github("abjur/somaCredor") # Instala direto do github
 ```
 
 O primeiro passo é importar a lista em arquivo `.pdf` utilizando o
 pacote `{pdftools}`:
 
 ``` r
-#library(somaCredor)
+library(somaCredor)
 
 # importando arquivo em pdf
 
-#exemplo_pdf <- system.file(
-  #"lista_aj.pdf", 
- # package = "somaCredor"
-#)
-#edital <- pdftools::pdf_text(exemplo_pdf)
+exemplo_pdf <- system.file("lista_aj.pdf",
+                           package = "somaCredor")
+edital <- pdftools::pdf_text(exemplo_pdf)
 ```
 
 Depois de importada sua lista você poderá utilizar a função
@@ -35,10 +33,12 @@ Depois de importada sua lista você poderá utilizar a função
 ## Exemplo
 
 ``` r
-#resultado <- soma_edital(edital)
+resultado <- soma_edital(edital) # Aplica a função
 
-#resultado
+resultado # Visualiza o resultado
 ```
+
+    ## [1] 5190181
 
 ## Observações
 
@@ -51,5 +51,10 @@ A função prevê o funcionamento ideal para os seguintes problemas:
 
   - Valores com erros de typo seguindo de (,): 100,000,00.
 
-Caso existir algum desses padrões, verifique o resultado de forma
+Caso você visualizar a seguinte mensagem no console:
+
+    ## Warning: Possível problema encontrado na formatação dos números. Utilizando
+    ## estratégia mais agressiva de detecção! Verificar resultado manualmente.
+
+ou existir algum dos padrões acima, verifique o resultado de forma
 manual.
