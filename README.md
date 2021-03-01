@@ -1,32 +1,32 @@
 
-# Somar Editais de lista de credores
+# Somar editais de lista de credores <a href='https://abjur.github.io/somaCredor'><img src='man/figures/hex.png' align="right" height="139" /></a>
 
-O objetivo desse pacote `{somaRelacaoCredores}` é disponibilizar o
-script que ajuda a somar todos os créditos da lista de credores que não
-apresentar um total oficial.
+O objetivo desse pacote `{somaCredor}` é disponibilizar o script que
+ajuda a somar todos os créditos da lista de credores que não apresentar
+um total oficial.
 
-Para seu funcionamento necessariamente a lista precisa originar nos
-padrões de edital do Tribunal de Justiça de São Paulo.
+Para seu funcionamento necessariamente a lista precisa estar nos padrões
+oficiais de edital do Tribunal de Justiça de São Paulo.
 
 # Instalação
 
 ``` r
-remotes::install_github("abjur/somaRelacaoCredores")
+#remotes::install_github("abjur/somaCredor")
 ```
 
 O primeiro passo é importar a lista em arquivo `.pdf` utilizando o
 pacote `{pdftools}`:
 
 ``` r
-library(somaRelacaoCredores)
+#library(somaCredor)
 
 # importando arquivo em pdf
 
-exemplo_pdf <- system.file(
-  "lista_aj.pdf", 
-  package = "somaRelacaoCredores"
-)
-edital <- pdftools::pdf_text(exemplo_pdf)
+#exemplo_pdf <- system.file(
+  #"lista_aj.pdf", 
+ # package = "somaCredor"
+#)
+#edital <- pdftools::pdf_text(exemplo_pdf)
 ```
 
 Depois de importada sua lista você poderá utilizar a função
@@ -35,12 +35,10 @@ Depois de importada sua lista você poderá utilizar a função
 ## Exemplo
 
 ``` r
-resultado <- soma_edital(edital)
+#resultado <- soma_edital(edital)
 
-resultado
+#resultado
 ```
-
-    ## [1] 5190181
 
 ## Observações
 

@@ -12,22 +12,22 @@ Para seu funcionamento necessariamente a lista precisa estar nos padrões oficia
 # Instalação
 
 ```{r eval=FALSE}
-remotes::install_github("abjur/somaCredor")
+#remotes::install_github("abjur/somaCredor")
 ```
 
 O primeiro passo é importar a lista em arquivo `.pdf` utilizando o pacote `{pdftools}`:
  
 ``` {r message=FALSE, warning=FALSE, results='hide'}
 
-library(somaCredor)
+#library(somaCredor)
 
 # importando arquivo em pdf
 
-exemplo_pdf <- system.file(
-  "lista_aj.pdf", 
-  package = "somaCredor"
-)
-edital <- pdftools::pdf_text(exemplo_pdf)
+#exemplo_pdf <- system.file(
+  #"lista_aj.pdf", 
+ # package = "somaCredor"
+#)
+#edital <- pdftools::pdf_text(exemplo_pdf)
 
 ```
 
@@ -36,9 +36,9 @@ Depois de importada sua lista você poderá utilizar a função `soma_edital` pa
 ## Exemplo
 
 ```{r message=FALSE, warning=FALSE}
-resultado <- soma_edital(edital)
+#resultado <- soma_edital(edital)
 
-resultado
+#resultado
 ``` 
 
 ## Observações 
