@@ -2,17 +2,18 @@
 % Please edit documentation in R/somaEdital.R
 \name{soma_edital}
 \alias{soma_edital}
-\title{Formula de somar Valores de Créditos em Editais Oficiais}
+\title{Essa função manipula um edital oficial para que seja possivel
+somar o total.}
 \usage{
 soma_edital(edital)
 }
 \arguments{
-\item{edital}{lista oficial, importada pelo pacote pdftools.}
+\item{edital}{edital em pdf oficial, importada pelo pacote pdftools.}
 }
 \value{
 Resultado da soma total dos créditos.
 }
 \description{
 Essa função manipula um edital oficial para que seja possivel
-somar seu o total.
+somar o total.
 }

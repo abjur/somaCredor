@@ -1,4 +1,4 @@
-Package: somaRelacaoCredores
+Package: somaCredor
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
@@ -7,8 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "kwitkoski@abj.org.br",
            comment = c(ORCID = "0000-0002-3691-6569"))
-Description: Ajuda a somar todos os créditos da lista de credores que não
-apresentar um total oficial.
+Description: Ajuda a somar todos os creditos da lista de credores.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

@@ -2,4 +2,5 @@
 
 export("%>%")
 export(soma_edital)
+export(warn_parse)
 importFrom(magrittr,"%>%")

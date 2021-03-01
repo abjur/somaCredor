@@ -2,10 +2,10 @@
 output: github_document
 ---
 
-# Somar editais de lista de credores <a href='https://abjur.github.io/somaCredor'><img src='man/figures/hex.png' align="right" height="139" /></a>
+# Somar editais de lista de credores    <a href='https://abjur.github.io/somaCredor'><img src='man/figures/hex.png' align="right" height="139" /></a>
 
-
-O objetivo desse pacote `{somaCredor}` é disponibilizar o script que ajuda a somar todos os créditos da lista de credores que não apresentar um total oficial. 
+O objetivo desse pacote `{somaCredor}` é disponibilizar o script que ajuda a somar todos os créditos
+da lista de credores que não apresentar um total oficial. 
 
 Para seu funcionamento necessariamente a lista precisa estar nos padrões oficiais de edital do Tribunal de Justiça de São Paulo. 
 
