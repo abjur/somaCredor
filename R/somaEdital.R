@@ -65,21 +65,15 @@ soma_edital <- function(edital) {
       # converter lista em vetor
       unlist() %>%
       # Remover finalzinho extra dos números
-    stringr::str_remove_all("[.,]+$")
+      stringr::str_remove_all("[.,]+$")
     final <- stringr::str_extract(entrada, ",[0-9]{2}$")
     inicio_arrumado <-
       stringr::str_extract(entrada, ".+(?=,[0-9]{2}$)") %>%
       stringr::str_remove_all("[^0-9]")
-      # Agrupando as variaveis
-      valores <- stringr::str_c(inicio_arrumado, final) %>%
+    # Agrupando as variaveis
+    valores <- stringr::str_c(inicio_arrumado, final) %>%
       # Marca de agrupamento pela localidade e ignorada
       readr::parse_number(locale = readr::locale(decimal_mark = ","))
   }
   return(sum(valores))
 }
-
-
-
-
-
-
