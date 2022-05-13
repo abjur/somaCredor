@@ -2,5 +2,6 @@
 
 export("%>%")
 export(soma_edital)
+export(soma_edital_com_pontos_invertidos)
 export(warn_parse)
 importFrom(magrittr,"%>%")

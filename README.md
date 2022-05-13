@@ -47,9 +47,11 @@ da organização dos responsáveis pela Lista de Credor.
 
 A função prevê o funcionamento ideal para os seguintes problemas:
 
-  - Valores entre a quebra da Página do TJSP.
+-   Valores entre a quebra da Página do TJSP.
 
-  - Valores com erros de typo seguindo de (,): 100,000,00.
+-   Valores com erros de typo seguindo de (,): 100,000,00.
+
+-   Listas com pontos de interrogação invertidos (¿).
 
 Caso você visualizar a seguinte mensagem no console:
 

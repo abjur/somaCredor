@@ -26,7 +26,6 @@ warn_parse <- function() {
 #' @return Resultado da soma total dos créditos.
 #'
 #' @export
-
 soma_edital <- function(edital) {
   # reduzir os espacos em branco repetidos dentro de uma string
   texto <- stringr::str_squish(edital)

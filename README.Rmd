@@ -18,7 +18,6 @@ remotes::install_github("abjur/somaCredor") # Instala direto do github
 O primeiro passo é importar a lista em arquivo `.pdf` utilizando o pacote `{pdftools}`:
  
 ``` {r message=FALSE, warning=FALSE, results='hide'}
-
 library(somaCredor)
 
 # importando arquivo em pdf
@@ -48,6 +47,8 @@ A função prevê o funcionamento ideal para os seguintes problemas:
 * Valores entre a quebra da Página do TJSP.
 
 * Valores com erros de typo seguindo de (,): 100,000,00.
+
+* Listas com pontos de interrogação invertidos (¿).
 
 
 Caso você visualizar a seguinte mensagem no console:
